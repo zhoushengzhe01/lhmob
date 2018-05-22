@@ -1,0 +1,852 @@
+@charset "utf-8";
+*{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: "Microsoft JhengHei","Microsoft YaHei","SimSun";
+    transition: all 0.4s;
+    -moz-transition: all 0.4s; /* Firefox 4 */
+    -webkit-transition: all 0.4s; /* Safari and Chrome */
+    -o-transition: all 0.4s; /* Opera */
+}
+body{
+    font-size: 15px;
+    background: #FFFFFF;
+    color: #666;
+    width: 100%;
+    min-width: 1024px;
+    font-weight: 300;
+}
+li{
+    list-style:none
+}
+
+/* 滚动条 */
+::-webkit-scrollbar  
+{
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track  
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);  
+    background-color:rgba(255,255,255,1);
+}
+::-webkit-scrollbar-thumb  
+{  
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color:rgba(158, 158, 158, 1);
+}
+a{
+    color:#666;
+    text-decoration:none
+}
+a:hover{
+    color: #409eff;
+}
+.flex{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex: 1;
+    flex: 1;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+    box-sizing: border-box;
+    min-width: 0;
+}
+.flex-item{
+    flex: 1;
+}
+
+.complete{
+    width: 100%
+}
+.container{
+    max-width: 1200px;
+    min-width: 1024px;
+    padding: 0px 15px;
+    margin: 0 auto;
+    height: 100%;
+}
+.container h2{
+    margin-bottom: 20px;
+    text-align: center;
+}
+.container .subtitle{
+    height: 30px;
+    width: 100%;
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+/*头部样式*/
+header{
+    /*background: #545c64;*/
+    height: 68px;
+    line-height: 68px;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+}
+header .logo{
+    width: 200px;
+    padding: 6px 0px;
+}
+header .menu{
+    text-align: right;
+    justify-content: flex-end;
+}
+header .menu a{
+    display: block;
+    width: 100px;
+    text-align: center;
+    font-size: 15px;
+    color: #DDDDDD;
+}
+header .menu a:hover{
+    color: #409eff;
+    /*background: #434a50;*/
+    border-bottom: 2px solid #409eff;
+}
+.header_action{
+    background: #434a50;
+}
+
+.banner-big{
+    height: 600px;
+}
+.banner-big .text{
+    height: 100%;
+    width: 100%;
+    background: url(../images/30.png);
+    text-align: center;
+    color: #ddd;
+    padding-top: 260px;
+    line-height: 30px;
+}
+.banner-big .text b{
+    color: #409eff;
+    padding: 0px 4px;
+}
+.banner-small{
+    height: 340px;
+}
+.banner-small .text{
+    height: 100%;
+    width: 100%;
+    background: url(../images/30.png);
+    text-align: center;
+    color: #ddd;
+    padding-top: 160px;
+    line-height: 30px;
+}
+
+/*我们的优势*/
+.advantage{
+    padding: 60px 0px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.advantage .content{
+    width: 100%;
+    font-size: 14px;
+    display: block;
+}
+.advantage .content .item{
+    width: 25%;
+    float: left;
+    text-align: left;
+    padding: 16px;
+}
+.advantage .content .item img{
+    width: 100%;
+}
+.advantage .content .item h3{
+    font-size: 18px;
+    padding-top: 12px;
+    padding-bottom: 8px;
+    text-align: center;
+}
+.advantage .content .item p{
+    font-size: 14px;
+    line-height: 26px;
+}
+
+/*我们的广告形式*/
+.species{
+    padding: 80px 0px;
+    background: #f1f5f8;
+    padding-bottom: 0px;
+}
+
+.species .title{
+    font-size: 26px;
+    text-align: center;
+    line-height: 40px;
+}
+.species .subtitle{
+    font-size: 16px;
+    text-align: center;
+    line-height: 40px;
+    margin-top: 20px;
+}
+.species .content{
+    width: 100%;
+    font-size: 14px;
+    display: block;
+    margin-top: 40px;
+    height: 900px;
+    overflow: hidden;
+    background: url("../images/img879.png") no-repeat left top;
+}
+.species .content .image{
+    float: left;
+    text-align: left;
+    padding-left: 191px;
+    padding-top: 105px;
+    width: 50%;
+}
+.species .content .image img{
+    display: none;
+    float: left;
+}
+.species .content .image .action{
+    display: block;
+}
+.species .content .title{
+    width: 40%;
+    float: right;
+    background: none;
+    text-align: left;
+    font-size: 20px;
+}
+@media (min-width: 1080px) {
+    .species .content .title{
+        width: 50%;
+    }  
+}
+.species .content .title span{
+    font-size: 14px;
+    display: block;
+}
+.species .content .title .item1{
+    background: none;
+    margin-top: 80px;
+    margin-left: 80px;
+    height: 120px;
+    cursor: pointer;
+}
+.species .content .title .item2{
+    background: none;
+    margin-top: 30px;
+    margin-left: 200px;
+    height: 120px;
+    cursor: pointer;
+}
+.species .content .title .item3{
+    background: none;
+    margin-top: 30px;
+    margin-left: 250px;
+    height: 120px;
+    cursor: pointer;
+}
+.species .content .title .item4{
+    background: none;
+    margin-top: 30px;
+    margin-left: 200px;
+    height: 120px;
+    cursor: pointer;
+}
+.species .content .title .item5{
+    background: none;
+    margin-top: 30px;
+    margin-left: 80px;
+    height: 120px;
+    cursor: pointer;
+}
+.species .content .title .action{
+    color: #40c381;
+}
+
+/*帮助中心*/
+.help{
+    padding: 60px 0px;
+    background: #fff;
+}
+.help .content{
+    width: 100%;
+    font-size: 14px;
+    display: block;
+    margin-top: 20px;
+    overflow: hidden;
+    padding: 0px 10px;
+}
+.help .content .announcement{
+    float: left;
+    width: 50%;
+    padding-right: 40px;
+}
+.help .content h3{
+    line-height: 40px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #409eff;
+    color: #409eff;
+}
+.help .content .more{
+    font-size: 13px;
+    float: right;
+}
+
+
+.help .content .announcement li{
+    font-size: 14px;
+    line-height: 40px;
+    border-bottom: 1px dotted #d9d9d9;
+}
+.help .content .announcement li span{
+    float: right;
+}
+.help .content .problem{
+    width: 50%;
+    float: right;
+    padding-left: 40px;
+}
+.help .content .problem .title{
+    font-size: 18px;
+    text-align: left;
+}
+.help .content .problem li{
+    line-height: 40px;
+    border-bottom: 1px dotted #d9d9d9;
+}
+.help .content .problem li span{
+    float: right;
+}
+
+/*我们的客户*/
+.customer{
+    padding: 60px 0px;
+    background: #f1f5f8;
+}
+.customer .content{
+    width: 100%;
+    font-size: 14px;
+    display: block;
+    overflow: hidden;
+}
+.customer .content a{
+    display: block;
+    float: left;
+    width: 20%;
+    padding: 16px;
+}
+.customer .content a img{
+    width: 100%;
+}
+
+
+/*联系我们*/
+.contact{
+    padding: 60px 0px;
+    border-top: 1px solid #eee;
+}
+.contact h4{
+    font-size: 16px;
+    line-height: 80px;
+}
+.contact .service{
+     padding-right: 40px;
+}
+.contact .service .list{
+    overflow: hidden;
+}
+.contact .service .list a{
+    float: left;
+    font-size: 14px;
+    display: block;
+    width: 90px;
+    line-height: 40px;
+}
+.contact .address{
+    border-left: 1px solid #eee;
+    padding-left: 40px;
+    line-height: 40px;
+}
+
+footer{
+    background: #545c64;
+    color: #DDDDDD;
+    font-size: 14px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+}
+
+
+/*流程*/
+.process{
+    padding: 10px 0px;
+    background: #fff;
+}
+.process .title{
+    font-size: 26px;
+    text-align: center;
+    line-height: 40px;
+}
+.process .subtitle{
+    font-size: 16px;
+    text-align: center;
+    line-height: 40px;
+    margin-top: 20px;
+}
+.process .content{
+    width: 100%;
+    font-size: 14px;
+    display: block;
+    overflow: hidden;
+}
+.process .content img{
+    width: 100%;
+}
+
+
+/*广告主页面*/
+.advert{
+    padding: 40px 0px;
+    background: #fff;
+}
+.advert .main{
+    width: 100%;
+    overflow: hidden;
+}
+.advert .main span{
+    display: block;
+    width: 15%;
+    float: left;
+    text-align: center;
+    margin: 0px 2.5%;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    height: 36px;
+    line-height: 36px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.advert .main .action{
+    background: #40c381;
+    color: #fff;
+    border: 1px solid #40c381;
+}
+.advert .content{
+    padding: 60px 2.5%;
+}
+.advert .content .con{
+    width: 100%;
+    overflow: hidden;
+    display: none;
+}
+.advert .content .action{
+    display: block;
+}
+.advert .content .con .left{
+    float: left;
+    width: 50%;
+    padding-right: 40px;
+}
+.advert .content .con .left h3{
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.advert .content .con .left p{
+    font-size: 16px;
+    line-height: 40px;
+}
+.advert .content .con .right{
+    float: left;
+    width: 50%;
+    padding-left: 40px;
+    text-align: right;
+}
+.advert .content .con .right img{
+    height: 300px;
+}
+
+.advert .botton{
+    margin: 0 auto;
+    height: 40px;
+    border: 1px solid #ccc;
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    border-radius: 20px;
+    width: 300px;
+    display: block;
+    background: #40c381;
+    color: #fff;
+    border: 1px solid #40c381;
+}
+
+
+/*常见问题*/
+.problems{
+    padding: 40px 0px;
+    background: #fff;
+}
+.problems .main{
+    width: 100%;
+    overflow: hidden;
+}
+.problems .main .webwhere{
+    float: left;
+    width: 48%;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+}
+.problems .main .advertwhere{
+    float: right;
+    width: 48%;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+}
+.problems .main .action{
+    background: #40c381;
+    border: 1px solid #40c381;
+    color: #fff;
+}
+
+.problems .content ul{
+    display: none;
+}
+.problems .content .action{
+    display: block;
+}
+.problems .content li{
+    padding: 20px 0px;
+    border-bottom: 1px solid #efefef;
+}
+.problems .content li h3{
+    font-size: 16px;
+    color: #40c381;
+    margin: 6px 0px;
+}
+.problems .content li p{
+    font-size: 14px;
+    color: #333;
+    line-height: 26px;
+}
+
+/*新闻列表*/
+.news{
+    width: 980px;
+    padding: 15px;
+    line-height: 44px;
+}
+.news li{
+    overflow: hidden;
+    border-bottom: 1px dotted #d9d9d9;
+}
+.news li b{
+    font-size: 15px;
+}
+.news li .time{
+    float: right;
+}
+
+.breadcrumb{
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.breadcrumb b{
+    font-weight: 700;
+}
+
+/*登陆*/
+.login{
+    padding: 40px 0px;
+    background: #fff;
+}
+.login .main{
+    width: 880px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.login .main .weblogin{
+    float: left;
+    width: 48%;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.login .main .advertlogin{
+    float: right;
+    width: 48%;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.login .main .action{
+    background: #40c381;
+    border: 1px solid #40c381;
+    color: #fff;
+}
+.login .content{
+    padding: 20px;
+}
+.login .content .login_form{
+    margin: 40px 0px;
+    display: none;
+}
+.login .content .action{
+    display: block;
+}
+.login .content .group{
+    display: block;
+    overflow: hidden;
+    width: 360px;
+    margin: 10px auto;
+}
+.login .content .group label{
+    display: block;
+    width: 200px;
+    text-align: right;
+    height: 36px;
+    line-height: 36px;
+    margin-right: 20px;
+    text-align: left;
+    font-size: 15px;
+}
+.login .content .group input{
+    display: block;
+    width: 100%;
+    border: 1px solid #ccc;
+    height: 36px;
+    padding: 6px 10px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+.login .content .group .submit{
+    background: #40c381;
+    border: 1px solid #40c381;
+    width: 100%;
+    color: #fff;
+    margin-top: 20px;
+    padding: 15px 10px;
+    font-size: 15px;
+}
+.login .content .group .forget{
+    float: left;
+    color: #40c381;
+} 
+.login .content .group .register1{
+    float: right;
+    color: #40c381;
+} 
+
+/*注册*/
+.register{
+    padding: 40px 0px;
+    background: #fff;
+}
+.register .main{
+    width: 880px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.register .main .weblogin{
+    float: left;
+    width: 48%;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.register .main .advertlogin{
+    float: right;
+    width: 48%;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.register .main .action{
+    background: #40c381;
+    border: 1px solid #40c381;
+    color: #fff;
+    border-radius: 4px;
+}
+.register .content{
+    padding: 0px;
+}
+.register .content .register_form{
+    margin: 40px 0px;
+    display: none;
+}
+.register .content .action{
+    display: block;
+}
+.register .content .group{
+    display: block;
+    overflow: hidden;
+    font-size: 14px;
+    width: 460px;
+    margin: 20px auto;
+}
+.register .content .group label{
+    display: block;
+    width: 60px;
+    text-align: right;
+    float: left;
+    height: 36px;
+    line-height: 36px;
+    margin-right: 20px;
+    text-align: right;
+    font-size: 15px;
+    font-weight: 700;
+}
+.register .content .group .tishi{
+    font-size: 14px;
+    line-height: 20px;
+    padding-left: 10px;
+    display: block;
+    float: left;
+    line-height: 32px;
+}
+.register .content .group .tishi b{
+    color: red;
+    padding-top: 10px;
+    vertical-align: sub;
+}
+.register .content .group .input{
+    display: block;
+    width: 360px;
+    border: 1px solid #ccc;
+    height: 36px;
+    float: left;
+    padding: 6px 10px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+.register .content .group select{
+    display: block;
+    width: 100px;
+    border: 1px solid #ccc;
+    height: 36px;
+    float: left;
+    padding: 6px 10px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+.register .content .group .submit{
+    display: block;
+    width: 300px;
+    height: 40px;
+    cursor: pointer;
+    background: #40c381;
+    border: 1px solid #40c381;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 4px;
+    float: left;
+}
+.register .content .group .login1{
+    font-size: 15px;
+    width: 160px;
+    float: right;
+    line-height: 38px;
+    padding-right: 14px;
+    text-align: right;
+}
+
+
+/*底部信息*/
+.footer {
+	color:#aaa;
+	line-height:80px;
+    background:#434a50;
+    font-size: 13px;
+}
+.footer i {
+	padding:0 20px
+}
+
+.pagination{text-align: center; margin-top: 30px;}
+.pagination li{display: initial; border: none;}
+.pagination li a{padding: 6px 14px; background: #fff; color: #40c381; border: 1px solid #40c381; margin: 0px 2px; border-radius: 3px;}
+.pagination li span{padding: 6px 14px; background: #40c381; color: #FFF; margin: 0px 2px; border-radius: 3px;}
+
+.message{
+    z-index: 90000;
+    top: 10px;
+    left: 0px;
+    right: 0px;
+    width: 300px;
+    margin: 0 auto;
+    font-size: 14px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    position: fixed;
+    background-color: #fff;
+    overflow: hidden;
+    opacity: 1;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    transition: opacity .2s;    
+}
+.message .success{
+	background-color: #f0f9eb;
+	color: #67c23a;
+	padding: 8px 16px;
+}
+.message .info{
+	background-color: #f4f4f5;
+	color: #909399;
+	padding: 8px 16px;
+	width: 100%;
+}
+.message .warning{
+	background-color: #fdf6ec;
+	color: #e6a23c;
+	padding: 8px 16px;
+	width: 100%;
+}
+.message .error{
+	background-color: #fef0f0;
+	color: #f56c6c;
+	padding: 8px 16px;
+	width: 100%;
+}
