@@ -109,7 +109,7 @@ class AuthController extends Controller
              return response()->json(['message'=>'今天你已经注册了多个账号，不能在注册了'], 300);
 
         //验证用户名是否重复
-        $count = Webmaster::where('username', '=', $present['nickname'])->count();
+        $count = Webmaster::where('username', '=', $present['email'])->count();
         
         if($count > 0)
             return response()->json(['message'=>'注册邮箱已经存在。'], 300);

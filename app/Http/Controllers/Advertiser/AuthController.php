@@ -112,6 +112,13 @@ class AuthController extends Controller
         if($count>=2)
             return response()->json(['message'=>'今天你已经注册了多个账号，不能在注册了'], 300);
 
+        //验证用户名是否重复
+        $count = Advertiser::where('username', '=', $present['email'])->count();
+        
+        if($count > 0)
+            return response()->json(['message'=>'注册邮箱已经存在。'], 300);
+        
+
         //插入数据
         $advertiser = new Advertiser();
         $advertiser->busine_id = $present['user_id'];

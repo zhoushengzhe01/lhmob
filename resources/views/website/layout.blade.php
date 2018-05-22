@@ -60,7 +60,7 @@
 		</div>
 	</div>
 
-	<footer>Copyright  ©  2017-2018  杭州领航联盟科技有限公司  (lhmob.cn, Inc.) 版权所有</footer>
+	<footer>Copyright © 2017-2018 杭州贝贾科技有限公司 (lhmob.cn, Inc.) 版权所有</footer>
 
 	<div class="footer tc">
 		<div class="box"></div>
